@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Movie = (movie) => {
+const Movie = ({image, title, genres, plot, imDbRating}) => {
   return (
     <div>
-      <p>{movie.title}</p>
-      <img src={movie.image} alt={movie.title}/>
-      <p>{movie.genres}</p>
-      <span>{movie.imDbRating}</span>
+      <h3> {title} </h3>
+      <img src={image} alt={title}/>
+      <p> {genres} </p>
+      <p> {plot} </p>
+      <span> {imDbRating} </span>
     </div>
   )
 }
