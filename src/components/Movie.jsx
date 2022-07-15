@@ -2,15 +2,15 @@ import React from 'react'
 
 const Movie = ({image, title, genres, plot, imDbRating}) => {
   return (
-	<div className="flex">
-		<img className="float-left w-full m-4 rounded" 
+	<div className="grid-cols-2">
+		<img className="" 
 			src={image} alt=""/> 
-		<div className="flex items-center justify-between">
-			<h5 className="text-right">{title}</h5>
-			<p className="text-right">
+		<div className="">
+			<h5 className="">{title}</h5>
+			<p className="">
 				{plot} 
 			</p>
-			<p className="text-right">{genres}</p>
+			<p className="">{genres}</p>
 			<span className="">{imDbRating}</span>
 		</div>
 	</div>
