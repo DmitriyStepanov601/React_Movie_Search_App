@@ -10,8 +10,10 @@
     }
 }
 
-* {
-    box-sizing: border-box;
+.film_image {
+    width: 300px;
 }
+
+
 
 

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Movie from "./components/Movie";
+import "./App.css";
 
 const FEATURED_API = 
 	"https://imdb-api.com/API/AdvancedSearch/k_k8zws5y8?user_rating=1.0,10&groups=top_250&count=100&sort=alpha,asc";
@@ -38,19 +39,19 @@ function App() {
 
 	return (
 		<>	
-			<header className="flex justify-end p-4 bg-black">
-				<h3 className=" text-amber-300 font-bold p-2">Movie Search(IMDB)</h3>
-				<form onSubmit={handleOnSubmit}>
-					<input className="bg-transparent p-2 text-base text-amber-300 
-					focus:outline-offset-0 placeholder:text-amber-300" 
-						type="text" 
-						placeholder="Search..."
-						value={search}
-						onChange={handleOnChange}
+			<header className="flex justify-between p-4 bg-black">
+				<h3 className=" text-amber-300 font-bold p-2">Movie IMDB Search</h3>
+				<form onSubmit={handleOnSubmit} className="justify-end">
+					<input className="bg-transparent p-2 text-base text-amber-300
+						focus:outline outline-offset-2 outline-amber-300 placeholder:text-amber-300" 
+							type="text" 
+							placeholder="Search..."
+							value={search}
+							onChange={handleOnChange}
 					/>
 				</form>
 			</header>	
-			<div className="flex gap-x-10 justify-center bg-amber-400">
+			<div className="grid grid-cols-4 gap-x-8 gap-y-4 justify-between bg-amber-400">
 				{ movies.map(movie => (
 					<Movie 
 						key = {movie.id} 
