@@ -1,0 +1,24 @@
+.film_image {
+    width: 350px;
+    height: 500px;
+}
+
+.film_post {
+    position: relative;
+    display: inline-block;
+}
+
+.film_post span {
+   background: #222;
+    color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    padding: 3px 5px;
+}
+
+.film h3 {
+    text-align: center;
+}
